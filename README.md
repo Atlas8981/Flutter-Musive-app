@@ -1,4 +1,4 @@
-# Musive
+<!-- # Musive
 
 Full-stack music player app is written in flutter and dart using node.js music API. Fully Functional music player with UI like Spotify app. Added 500+ royalty-free music and information about artists. Application users can make their own playlist or collect liked songs. 
 for backend setup [here](https://github.com/Ansh-Rathod/Musive-Backend)
@@ -106,4 +106,4 @@ for backend or any other configuration feel free to contact me.
 </a>
 <a href="https://www.linkedin.com/in/ansh-rathod-478a81210/">
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
+</a> -->
