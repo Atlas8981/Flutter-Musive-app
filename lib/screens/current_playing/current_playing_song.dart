@@ -91,26 +91,28 @@ class CurrentPlayingSong extends StatelessWidget {
                                 IconButton(
                                   onPressed: () {
                                     showModalBottomSheet(
-                                        useRootNavigator: true,
-                                        isScrollControlled: true,
-                                        elevation: 100,
-                                        backgroundColor: Colors.black38,
-                                        context: context,
-                                        builder: (context) {
-                                          return BottomSheetWidget(
-                                              con: con,
-                                              isNext: true,
-                                              song: SongModel(
-                                                songid: myAudio.metas.id,
-                                                songname: myAudio.metas.title,
-                                                userid: myAudio.metas.album,
-                                                trackid: myAudio.path,
-                                                duration: '',
-                                                coverImageUrl:
-                                                    myAudio.metas.image!.path,
-                                                name: myAudio.metas.artist,
-                                              ));
-                                        });
+                                      useRootNavigator: true,
+                                      isScrollControlled: true,
+                                      elevation: 100,
+                                      backgroundColor: Colors.black38,
+                                      context: context,
+                                      builder: (context) {
+                                        return BottomSheetWidget(
+                                          con: con,
+                                          isNext: true,
+                                          song: SongModel(
+                                            songid: myAudio.metas.id,
+                                            songname: myAudio.metas.title,
+                                            userid: myAudio.metas.album,
+                                            trackid: myAudio.path,
+                                            duration: '',
+                                            coverImageUrl:
+                                                myAudio.metas.image!.path,
+                                            name: myAudio.metas.artist,
+                                          ),
+                                        );
+                                      },
+                                    );
                                   },
                                   icon: const Icon(
                                     Icons.more_vert,
@@ -179,10 +181,10 @@ class CurrentPlayingSong extends StatelessWidget {
                                   ),
                                 ),
                                 LikeButton(
-                                  name: myAudio.metas.title!,
-                                  fullname: myAudio.metas.artist!,
-                                  username: myAudio.metas.album!,
-                                  id: myAudio.metas.id!,
+                                  name: myAudio.metas.title ?? "",
+                                  fullname: myAudio.metas.artist ?? "",
+                                  username: myAudio.metas.album ?? "",
+                                  id: myAudio.metas.id ?? "",
                                   track: myAudio.path,
                                   isIcon: false,
                                   cover: myAudio.metas.image!.path,

@@ -177,7 +177,7 @@ class SearchResultsPage extends StatelessWidget {
                                   "songname": state.users[i].name,
                                   "fullname": state.users[i].username,
                                   "username": '',
-                                  "cover": state.users[i].avatar,
+                                  "cover": state.users[i].profileImage,
                                   "track": '',
                                   "id": '',
                                   "type": "ARTIST"
@@ -197,7 +197,7 @@ class SearchResultsPage extends StatelessWidget {
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(3),
                                       child: CachedNetworkImage(
-                                        imageUrl: state.users[i].avatar!,
+                                        imageUrl: state.users[i].profileImage!,
                                         width: 50,
                                         height: 50,
                                         progressIndicatorBuilder:

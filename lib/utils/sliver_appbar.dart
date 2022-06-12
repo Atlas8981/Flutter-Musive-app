@@ -17,11 +17,13 @@ class MyDelegate extends SliverPersistentHeaderDelegate {
   final UserModel user;
   final MainController con;
   final List<SongModel> songs;
+
   MyDelegate({
     required this.user,
     required this.con,
     required this.songs,
   });
+
   @override
   Widget build(context, double shrinkOffset, bool overlapsContent) {
     var shrinkPercentage =

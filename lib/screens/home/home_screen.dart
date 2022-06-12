@@ -21,6 +21,76 @@ class HomeScreen extends StatelessWidget {
       create: (context) => HomeCubit()..getUsers(),
       child: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
+          // return Scaffold(
+          //   body: ListView(
+          //     children: [
+          //       RecentUsers(
+          //         con: con,
+          //         users: [] /*state.users.sublist(0, 6)*/,
+          //       ),
+          //       const SizedBox(height: 12),
+          //       Padding(
+          //         padding: const EdgeInsets.symmetric(
+          //           horizontal: 16.0,
+          //           vertical: 8,
+          //         ),
+          //         child: Text(
+          //           "Popular Hits",
+          //           style: Theme.of(context).textTheme.headline4,
+          //         ),
+          //       ),
+          //       HorizontalSongList(
+          //         con: con,
+          //         songs: [] /*state.songs.sublist(0, 10)*/,
+          //       ),
+          //       const SizedBox(height: 12),
+          //       Padding(
+          //         padding:
+          //             const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+          //         child: Text(
+          //           "Best Picks For You",
+          //           style: Theme.of(context).textTheme.headline4,
+          //         ),
+          //       ),
+          //       HorizontalArtistList(
+          //         con: con,
+          //         users: [] /*state.users.sublist(6, 16)*/,
+          //       ),
+          //       const SizedBox(height: 12),
+          //       Padding(
+          //         padding: const EdgeInsets.symmetric(
+          //           horizontal: 16.0,
+          //           vertical: 8,
+          //         ),
+          //         child: Text(
+          //           "New Releases",
+          //           style: Theme.of(context).textTheme.headline4,
+          //         ),
+          //       ),
+          //       HorizontalSongList(
+          //         con: con,
+          //         songs: [] /*state.songs.sublist(10, 20)*/,
+          //       ),
+          //       const SizedBox(height: 12),
+          //       Padding(
+          //         padding: const EdgeInsets.symmetric(
+          //           horizontal: 16.0,
+          //           vertical: 8,
+          //         ),
+          //         child: Text(
+          //           "You might also like",
+          //           style: Theme.of(context).textTheme.headline4,
+          //         ),
+          //       ),
+          //       HorizontalArtistList(
+          //         con: con,
+          //         users: [] /*state.users.sublist(16)*/,
+          //       ),
+          //       const SizedBox(height: 12),
+          //     ],
+          //   ),
+          // );
+
           if (state.status == LoadPage.loading) {
             return const Scaffold(
               body: Center(

@@ -1,16 +1,16 @@
 class User {
-  String? avatar;
+  String? profileImage;
   String? username;
   String? name;
 
   User({
-    this.avatar,
+    this.profileImage,
     this.username,
     this.name,
   });
 
   factory User.fromJson(Map<String, dynamic> json) => User(
-        avatar: json['avatar'] as String?,
+        profileImage: json['avatar'] as String?,
         username: json['username'] as String?,
         name: json['first_name'] + ' ' + json['last_name'] as String?,
       );

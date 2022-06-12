@@ -21,7 +21,7 @@ class PlayListWidget extends StatefulWidget {
 
 class _PlayListWidgetState extends State<PlayListWidget> {
   Audio findSong(title) {
-    final currentlyPlayingAudio = widget.con.findByname(widget.audios, title);
+    final currentlyPlayingAudio = widget.con.findByName(widget.audios, title);
 
     return currentlyPlayingAudio;
   }
@@ -39,7 +39,7 @@ class _PlayListWidgetState extends State<PlayListWidget> {
       body: Padding(
         padding: const EdgeInsets.all(14.0),
         child: Builder(builder: (context) {
-          final currentlyPlayingAudio = widget.con.findByname(
+          final currentlyPlayingAudio = widget.con.findByName(
               widget.audios, widget.con.player.getCurrentAudioTitle);
           int indexOfCurrentAudio =
               widget.audios.indexOf(currentlyPlayingAudio);

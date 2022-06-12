@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/controllers/main_controller.dart';
+import 'package:spotify_clone/utils/constant.dart';
 
 import '../methods/get_greeting.dart';
 import '../models/user.dart';
@@ -12,6 +13,7 @@ import 'loading.dart';
 class RecentUsers extends StatelessWidget {
   final List<User> users;
   final MainController con;
+
   const RecentUsers({
     Key? key,
     required this.users,
@@ -20,10 +22,11 @@ class RecentUsers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Stack(
       children: [
         CachedNetworkImage(
-          imageUrl: users[0].avatar!,
+          imageUrl: users[0].profileImage!,
           fit: BoxFit.cover,
           height: MediaQuery.of(context).size.height * .15,
           width: MediaQuery.of(context).size.width * .67,
@@ -79,7 +82,7 @@ class RecentUsers extends StatelessWidget {
                                         bottomLeft: Radius.circular(3),
                                       ),
                                       child: CachedNetworkImage(
-                                        imageUrl: user.avatar!,
+                                        imageUrl: user.profileImage!,
                                         width: 55,
                                         height: 55,
                                         progressIndicatorBuilder:

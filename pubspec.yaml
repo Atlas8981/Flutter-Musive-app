@@ -26,7 +26,6 @@ dependencies:
 
 
   cupertino_icons: ^1.0.2
-  http: ^0.13.4
   cached_network_image: ^3.2.0
   flutter_bloc: ^8.0.1
   line_icons: ^2.0.1
@@ -35,6 +34,43 @@ dependencies:
   hive_flutter: ^1.1.0
   path_provider: ^2.0.8
   url_launcher: ^6.0.18
+  khmer_date: ^0.0.6
+
+  #  GetX
+  get_storage: ^2.0.3
+  get: ^4.3.8
+
+  #  Enhancing UI/UX
+  flutter_countdown_timer: ^4.1.0
+  flutter_local_notifications: ^9.0.2
+  flutter_staggered_grid_view: ^0.6.1
+
+
+  #  Image and File
+  extended_image: ^6.0.2+1
+  open_file: ^3.2.1
+  file_picker: ^4.2.7
+  carousel_slider: ^4.0.0
+  dots_indicator: ^2.0.0
+  photo_view: ^0.13.0
+  flutter_svg: ^1.0.0
+
+  # Firebase dependency
+  cloud_firestore: ^3.1.4
+  firebase_core: ^1.10.5
+  firebase_auth: ^3.3.3
+  firebase_storage: ^10.2.10
+
+  #  Utilities
+  http: ^0.13.3
+  intl: ^0.17.0
+  fluttertoast: ^8.0.8
+  json_annotation: ^4.4.0
+  algolia: ^1.0.5
+  package_info_plus: ^1.4.2
+#  just_audio: ^0.9.20
+  id3: ^1.0.2
+  flutter_media_metadata: ^1.0.0+1
 
 dev_dependencies:
   flutter_test:

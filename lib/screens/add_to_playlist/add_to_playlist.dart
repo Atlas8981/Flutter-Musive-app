@@ -13,6 +13,7 @@ class AddToPlaylist extends StatelessWidget {
   final String cover;
   final String track;
   final String id;
+
   const AddToPlaylist({
     Key? key,
     required this.name,
@@ -65,12 +66,16 @@ class AddToPlaylist extends StatelessWidget {
                               controller: con,
                               cursorColor: Colors.lightGreen,
                               style: const TextStyle(
-                                  color: Colors.white, fontSize: 24),
+                                color: Colors.white,
+                                fontSize: 24,
+                              ),
                               autofocus: true,
                               decoration: const InputDecoration(
                                 focusedBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
-                                      color: Colors.lightGreen, width: 2),
+                                    color: Colors.lightGreen,
+                                    width: 2,
+                                  ),
                                 ),
                               ),
                             ),

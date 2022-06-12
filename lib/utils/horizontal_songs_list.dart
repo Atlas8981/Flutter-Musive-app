@@ -5,6 +5,7 @@ import 'package:spotify_clone/controllers/main_controller.dart';
 import 'package:spotify_clone/models/song_model.dart';
 import 'package:spotify_clone/models/user.dart';
 import 'package:spotify_clone/screens/artist_profile/artist_profile.dart';
+import 'package:spotify_clone/utils/constant.dart';
 import 'package:spotify_clone/utils/loading.dart';
 
 import 'botttom_sheet_widget.dart';
@@ -12,6 +13,7 @@ import 'botttom_sheet_widget.dart';
 class HorizontalSongList extends StatelessWidget {
   final List<SongModel> songs;
   final MainController con;
+
   const HorizontalSongList({
     Key? key,
     required this.songs,
@@ -20,6 +22,8 @@ class HorizontalSongList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    songs.addAll(dummySongList);
+
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
@@ -31,7 +35,9 @@ class HorizontalSongList extends StatelessWidget {
                 (song) => InkWell(
                   onTap: () {
                     con.playSong(
-                        con.convertToAudio(songs), songs.indexOf(song));
+                      con.convertToAudio(songs),
+                      songs.indexOf(song),
+                    );
                   },
                   onLongPress: () {
                     showModalBottomSheet(
@@ -88,6 +94,7 @@ class HorizontalSongList extends StatelessWidget {
 class HorizontalArtistList extends StatelessWidget {
   final List<User> users;
   final MainController con;
+
   const HorizontalArtistList({
     Key? key,
     required this.users,
@@ -107,10 +114,14 @@ class HorizontalArtistList extends StatelessWidget {
                 (user) => InkWell(
                   onTap: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ArtistProfile(
-                                username: user.username!, con: con)));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ArtistProfile(
+                          username: user.username!,
+                          con: con,
+                        ),
+                      ),
+                    );
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -121,7 +132,7 @@ class HorizontalArtistList extends StatelessWidget {
                         children: [
                           ClipOval(
                             child: CachedNetworkImage(
-                              imageUrl: user.avatar!,
+                              imageUrl: user.profileImage!,
                               width: 150,
                               height: 150,
                               progressIndicatorBuilder: (context, url, l) =>

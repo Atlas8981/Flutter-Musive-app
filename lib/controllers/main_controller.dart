@@ -139,7 +139,7 @@ class MainController extends ChangeNotifier {
     return source.firstWhere((element) => element.path == fromPath);
   }
 
-  Audio findByname(List<Audio> source, String fromPath) {
+  Audio findByName(List<Audio> source, String fromPath) {
     return source.firstWhere((element) => element.metas.title == fromPath);
   }
 

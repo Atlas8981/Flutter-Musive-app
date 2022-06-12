@@ -15,6 +15,7 @@ class BottomSheetWidget extends StatelessWidget {
   final MainController con;
   final bool? isNext;
   final SongModel song;
+
   const BottomSheetWidget({
     Key? key,
     required this.con,
@@ -86,20 +87,20 @@ class BottomSheetWidget extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           LikeButton(
-            id: song.songid!,
+            id: song.songid ?? "",
             isIcon: true,
-            cover: song.coverImageUrl!,
-            fullname: song.name!,
-            name: song.songname!,
-            track: song.trackid!,
-            username: song.userid!,
+            cover: song.coverImageUrl ?? "",
+            fullname: song.name ?? "",
+            name: song.songname ?? "",
+            track: song.trackid ?? "",
+            username: song.userid ?? "",
           ),
           if (isNext == null)
             ListTile(
               onTap: () {
                 var title = con.player.getCurrentAudioTitle;
                 Audio currentSong =
-                    con.findByname(con.player.playlist!.audios, title);
+                    con.findByName(con.player.playlist!.audios, title);
                 int currentIndex =
                     con.player.playlist!.audios.indexOf(currentSong);
                 con.player.playlist!
